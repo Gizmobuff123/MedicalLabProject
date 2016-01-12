@@ -6,6 +6,7 @@ public class Profile
 	private String contactNo;
 	private String email;
 	private String cnic;
+	private String Bloodgroup;
 	public int getPatientId() 
 	{
 		return patientId;
@@ -13,6 +14,14 @@ public class Profile
 	public void setPatientId(int patientId) 
 	{
 		this.patientId = patientId;
+	}
+	public int getBloodgroup()
+	{
+		return Bloodgroup;
+	}
+	public void setbloodgroup(String Bloodgroup)
+	{
+		this.Bloodgroup=Bloodgrop;
 	}
 	public String getName() 
 	{
@@ -63,6 +72,7 @@ public class Profile
 		this.contactNo = contactNo;
 		this.email = email;
 		this.cnic = cnic;
+		this.Bloodgroup=Bloodgroup;
 		
 	}
 	
