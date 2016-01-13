@@ -6,19 +6,19 @@ public class Deliverable extends Profile
 	private String testReport;
 	public int getTestCode()
 	{
-		return testCode;
+		 return testCode;
 	}
 	public void setTestCode(int testCode) 
 	{
-		this.testCode = testCode;
+		 this.testCode = testCode;
 	}
 	public String getTestReport() 
 	{
-		return testReport;
+		 return testReport;
 	}
 	public void setTestReport(String testReport) 
 	{
-		this.testReport = testReport;
+		 this.testReport = testReport;
 	}
 	public Deliverable(int patientId, String name, String address, 
 			String contactNo, String email, String cnic, int testCode, String testReport) 
