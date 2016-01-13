@@ -1,81 +1,110 @@
 package MedicalLabPackage;
 
-public class Profile
+import java.awt.HeadlessException;
+
+import javax.swing.*;
+public class UserInterface extends JFrame
 {
-	private int patientId;
-	private String name;
-	private String address;
-	private String contactNo;
-	private String email;
-	private String cnic;
-	private Test t;
-	public int getPatientId() 
-	{
-		return patientId;
-	}
-	public void setPatientId(int patientId) 
-	{
-		this.patientId = patientId;
-	}
-	public String getName() 
-	{
-		return name;
-	}
-	public void setName(String name) 
-	{
-		this.name = name;
-	}
-	public String getAddress() 
-	{
-		return address;
-	}
-	public void setAddress(String address) 
-	{
-		this.address = address;
-	}
-	public String getContactNo() 
-	{
-		return contactNo;
-	}
-	public void setContactNo(String contactNo) 
-	{
-		this.contactNo = contactNo;
-	}
-	public String getEmail() 
-	{
-		return email;
-	}
-	public void setEmail(String email) 
-	{
-		this.email = email;
-	}
-	public String getCnic() 
-	{
-		return cnic;
-	}
-	public void setCnic(String cnic) 
-	{
-		this.cnic = cnic;
-	}
-	public Profile(int patientId, String name, String address, String contactNo, String email, String cnic, int testCode) 
-	{
-		super();
-		this.patientId = patientId;
-		this.name = name;
-		this.address = address;
-		this.contactNo = contactNo;
-		this.email = email;
-		this.cnic = cnic;
-		t=new Test(testCode);
-	}
-	public Profile()
-	{
-		super();
-	}
-	public void newTest(int testCode)
-	{
-		this.t=new Test(testCode);
-	}
-		
+	public JLabel label1=new JLabel();
+	public JLabel label2=new JLabel();
+	public JLabel label3=new JLabel();
+	public JLabel label4=new JLabel();
+	public JLabel label5=new JLabel();
+	public JLabel label6=new JLabel();
+	public JLabel header=new JLabel();
+	public JLabel header2=new JLabel();
+	public JTextField text1=new JTextField();
+	public JTextField text2=new JTextField();
+	public JTextField text3=new JTextField();
+	public JTextField text4=new JTextField();
+	public JTextField text5=new JTextField();
+	public JTextField text6=new JTextField();
+	public JTextField text7=new JTextField();
+	public JTextField text8=new JTextField();
+	public JButton ok1=new JButton();
+	public JLabel label7=new JLabel();
+	public JLabel label8=new JLabel();
+	public JButton ok2=new JButton();
+	public JTextField text9=new JTextField();
 	
+	
+	public UserInterface() throws HeadlessException 
+	{
+		
+		super();
+		interface1();
+	}
+	
+	public void interface1()
+	{
+		ok1.setText("Ok");
+		ok1.setBounds(100,400,50,50);
+		ok2.setText("ok");
+		ok2.setBounds(550,200,50,50);
+		header.setText("New Profile");
+		header.setBounds(50, 50, 100, 50);
+		header2.setText("New Test");
+		header2.setBounds(500,50,100,50);
+		label1.setText("Id:");
+		label1.setBounds(50, 100, 100, 30);
+		text1.setBounds(200, 100, 100, 30);
+		
+		label2.setText("Name:");
+		label2.setBounds(50, 150, 100, 30);
+		text2.setBounds(200,150,100,30);
+		
+		label3.setText("Address:");
+		label3.setBounds(50, 200, 100, 30);
+		text3.setBounds(200,200,100,30);
+		
+		label4.setText("Contact No:");
+		label4.setBounds(50, 250, 100, 30);
+		text4.setBounds(200,250,100,30);
+		
+		label5.setText("Email:");
+		label5.setBounds(50, 300, 100, 30);
+		text5.setBounds(200,300,100,30);
+		
+		label6.setText("CNIC:");
+		label6.setBounds(50, 350, 100, 30);
+		text6.setBounds(200,350,100,30);
+		
+		label7.setText("Patient ID:");
+		label7.setBounds(500,100,100,30);
+		text7.setBounds(600,100,100,30);
+		
+		label8.setText("Test Code:");
+		label8.setBounds(500,150,100,30);
+		text8.setBounds(600,150,100,30);
+		this.setSize(800, 800);
+		this.show();
+		
+		
+		this.setLayout(null);
+		this.add(ok1);
+		this.add(header);
+		this.add(header2);
+		this.add(text1);
+		this.add(text2);
+		this.add(text3);
+		this.add(text4);
+		this.add(text5);
+		this.add(text6);
+		this.add(label1);
+		this.add(label2);
+		this.add(label3);
+		this.add(label4);
+		this.add(label5);
+		this.add(label6);
+		this.add(label7);
+		this.add(text7);
+		this.add(label8);
+		this.add(text8);
+		this.add(ok2);
+	}
+	public static void main(String[] args) 
+	{
+		UserInterface ui=new UserInterface();
+	}	
 }
+
