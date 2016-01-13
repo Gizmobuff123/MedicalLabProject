@@ -5,12 +5,12 @@ public class Finance
 	
 	Finance(int t)
 	{
-		super();
-		amountInDashboard=amountInDashboard+t;
+		 super();
+		 amountInDashboard=amountInDashboard+t;
 	}
 
 	public static int getAmountInDashboard() 
 	{
-		return amountInDashboard;
+		 return amountInDashboard;
 	}
 }
