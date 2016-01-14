@@ -1,27 +1,20 @@
+package medicalLabEntities;
+
 public class Profile
 {
-	private int patientId;
+	private int profileId;
 	private String name;
 	private String address;
 	private String contactNo;
 	private String email;
 	private String cnic;
-	private String Bloodgroup;
-	public int getPatientId() 
+	public int getProfileId() 
 	{
-		return patientId;
+		return profileId;
 	}
-	public void setPatientId(int patientId) 
+	public void setProfileId(int profileId) 
 	{
-		this.patientId = patientId;
-	}
-	public int getBloodgroup()
-	{
-		return Bloodgroup;
-	}
-	public void setbloodgroup(String Bloodgroup)
-	{
-		this.Bloodgroup=Bloodgrop;
+		this.profileId = profileId;
 	}
 	public String getName() 
 	{
@@ -63,19 +56,20 @@ public class Profile
 	{
 		this.cnic = cnic;
 	}
-	public Profile(int patientId, String name, String address, String contactNo, String email, String cnic) 
+	public Profile(int profileId, String name, String address, String contactNo, String email, String cnic, int testCode) 
 	{
 		super();
-		this.patientId = patientId;
+		this.profileId = profileId;
 		this.name = name;
 		this.address = address;
 		this.contactNo = contactNo;
 		this.email = email;
 		this.cnic = cnic;
-		this.Bloodgroup=Bloodgroup;
-		
+	
 	}
-	
-		
-	
+	public Profile()
+	{
+		super();
+	}	
 }
+
