@@ -1,54 +1,24 @@
-package MedicalLabPackage;
-
+package medicalLabEntities;
 
 public class Test
 {
-	private int patientId;
+	private int profileId;
 	private int testCode;
-	private String description;
-	private int testRate;
-	private String testReport;
 	
-	public String getTestReport() 
+	public int getProfileId() 
 	{
-		return testReport;
+		return profileId;
 	}
-
-	public void setTestReport(String testReport) 
+	public void setProfileId(int profileId) 
 	{
-		this.testReport = testReport;
+		this.profileId = profileId;
 	}
-
 	public int getTestCode() 
 	{
 		return testCode;
 	}
-
-	public String getDescription() 
+	public void setTestCode(int testCode) 
 	{
-		return description;
-	}
-    
-
-	public Test(int testCode) 
-	{
-		super();
 		this.testCode = testCode;
-		this.testReport="Report has not been recieved yet";
-		this.testRate=0;
-		if (this.testCode==101)
-		{
-			this.description="Dengue Test";
-			this.testRate=2500;
-		}
-		else if (this.testCode==102)
-		{
-			this.description="Malaria Test";
-			this.testRate=1500;
-		}
-		Finance f=new Finance(testRate);
-		
 	}
-
 }
-
