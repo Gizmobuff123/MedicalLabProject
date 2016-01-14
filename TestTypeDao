@@ -1,0 +1,50 @@
+package medicalLabDao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import businessHandler.DBConnectionMySQL;
+import medicalLabEntities.TestType;
+
+public class TestTypeDao
+{
+	Connection theCon;
+	Statement stmt;
+	static ArrayList<TestType> sList= new ArrayList<TestType>();
+	static int count = 0;
+	public TestTypeDao()
+	{
+		try 
+		{
+			theCon = DBConnectionMySQL.getConnection();
+			stmt = theCon.createStatement();
+		} 
+		
+		catch (SQLException e) 
+		{
+			System.out.println("Not Connected with SQL");
+		} 
+		catch ( ClassNotFoundException e) 
+		{
+			System.out.println("Not Connected ClassNotFound.");
+		} 
+	}
+	public void insertObjection(TestType t)
+	{
+		try 
+		{
+			String strQuery = "INSERT INTO testtype  VALUES ("
+				+t.getTestCode()+",'"+t.getTestRate()+"','"+t.getDescription()+"')";
+			stmt.executeUpdate(strQuery);
+		} catch (SQLException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	
+}
+
